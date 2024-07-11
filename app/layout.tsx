@@ -1,3 +1,7 @@
+import { Navbar } from '@/components/ui/Navbar'
+
+import './app.scss'
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ko'>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   )
 }

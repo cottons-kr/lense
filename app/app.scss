@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SF-Pro.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Rounded';
+  font-weight: 600;
+  src: url('/fonts/SF-Pro-Rounded-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Rounded';
+  font-weight: 800;
+  src: url('/fonts/SF-Pro-Rounded-Heavy.woff2') format('woff2');
+}
+
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family:
+    'SF Pro',   
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+  background-color: #FFF;
+  color: var(--Black);
+}
+
+:root {
+  --green: #50d890;
+  --blue: #4f98ca;
+  --black: #272727;
+  --snow: #effffb;
+  --light-green: #ebfff4;
+  --light-blue: #ebf6ff;
+  --purple: #7071e8;
+  --light-purple: #ebebff;
+  --fill-color: #fafafa;
+  --border: rgba(121 125 139 / 0.16);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--background) inset !important; // 색상 없애기
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-main) !important;
+}

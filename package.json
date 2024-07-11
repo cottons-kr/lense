@@ -6,7 +6,11 @@
     "dev": "next dev -p 7999",
     "build": "next build",
     "start": "next start -p 7999",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:migrate:prod": "prisma migrate deploy",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio -p 5999"
   },
   "dependencies": {
     "@egjs/flicking-plugins": "^4.7.1",
