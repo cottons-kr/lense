@@ -1,18 +1,7 @@
-import { shuffleArray } from '@/utils/array'
-import s from './style.module.scss'
 import { Flex } from '@/components/layout/Flex'
+import { BackgroundVideo } from './video'
 
-function BackgroundVideo() {
-  return <>
-    <div className={s.background}>{
-      shuffleArray(['beach', 'mountain', 'sky', 'traffic']).map((v, i) => (
-        <video key={i} autoPlay loop muted playsInline className={s[v]}>
-          <source src={`/videos/${v}.mp4`} type='video/mp4' />
-        </video>
-      ))
-    }</div>
-  </>
-}
+import s from './style.module.scss'
 
 export function HomeWelcome() {
   return <>

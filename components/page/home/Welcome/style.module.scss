@@ -17,39 +17,7 @@
     object-fit: cover;
     top: 0;
     left: 0;
-    &:nth-child(1) {
-      opacity: 1;
-      animation: none;
-    }
-    &:nth-child(2) {
-      opacity: 0;
-      animation-name: fadeIn;
-      animation-duration: 3s;
-      animation-fill-mode: forwards;
-      animation-delay: 10s;
-    }
-    &:nth-child(3) {
-      opacity: 0;
-      animation-name: fadeIn;
-      animation-duration: 3s;
-      animation-fill-mode: forwards;
-      animation-delay: 20s;
-    }
-    &:nth-child(4) {
-      opacity: 0;
-      animation-name: fadeIn;
-      animation-duration: 3s;
-      animation-fill-mode: forwards;
-      animation-delay: 30s;
-    }
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    transition: opacity 5s;
   }
 }
 

@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/ui/Navbar'
 
 import './app.scss'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 export default function RootLayout({
   children,
