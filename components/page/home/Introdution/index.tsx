@@ -1,6 +1,7 @@
 import { Flex } from '@/components/layout/Flex'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { CompanyMarquee } from './company'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 import s from './style.module.scss'
@@ -26,12 +27,6 @@ function Content() {
         모두 보러가기
       </Link>
     </Flex>
-  </>
-}
-
-function CompanyMarquee() {
-  return <>
-    
   </>
 }
 

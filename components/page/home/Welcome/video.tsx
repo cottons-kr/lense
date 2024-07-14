@@ -1,8 +1,7 @@
-
 'use client'
 
 import { shuffleArray } from '@/utils/array'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import s from './style.module.scss'
 
@@ -15,16 +14,28 @@ interface IProps {
 }
 function Video(props: IProps) {
   const { src, order, currentOrder } = props
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    if (order === currentOrder) {
+      video.currentTime = 0
+      video.play()
+    }
+  }, [currentOrder])
 
   return <>
     <video
-      src={`/videos/${src}.mp4`}
+      ref={videoRef}
       autoPlay
       muted
-      loop
       playsInline
       style={{ opacity: order === currentOrder ? 1 : 0 }}
-    />
+    >
+      <source src={`/videos/${src}_vp9.webm`} type='video/webm' />
+      <source src={`/videos/${src}.mp4`} type='video/mp4' />
+    </video>
   </>
 }
 
