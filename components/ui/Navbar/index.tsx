@@ -1,11 +1,11 @@
 'use client'
 
 import { Flex } from '@/components/layout/Flex'
-
-import s from './style.module.scss'
 import Link from 'next/link'
 import className from 'classnames'
 import { useEffect, useState } from 'react'
+
+import s from './style.module.scss'
 
 function Left() {
   return <>
@@ -28,15 +28,19 @@ function Right() {
 
 export function Navbar() {
   const [isTop, setIsTop] = useState(true)
+  const [isOutofVideo, setIsOutofVideo] = useState(false)
 
   useEffect(() => {
-    const handler = () => setIsTop(window.scrollY < 100)
+    const handler = () => {
+      setIsTop(window.scrollY < 10)
+      setIsOutofVideo(window.scrollY > window.innerHeight)
+    }
     window.addEventListener('scroll', handler)
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
   return <>
-    <Flex className={className(s.nav, isTop && s.top)} tag='nav' justify='center'>
+    <Flex className={className(s.nav, isTop && s.top, isOutofVideo && s['out-of-video'])} tag='nav' justify='center'>
       <Flex className={s.content} justify='space-between' align='center'>
         <Left />
         <Right />

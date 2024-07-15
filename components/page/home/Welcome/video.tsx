@@ -33,8 +33,8 @@ function Video(props: IProps) {
       playsInline
       style={{ opacity: order === currentOrder ? 1 : 0 }}
     >
-      <source src={`/videos/${src}_vp9.webm`} type='video/webm' />
-      <source src={`/videos/${src}.mp4`} type='video/mp4' />
+      <source src={`/assets/lense-asset/videos/${src}_vp9.webm`} type='video/webm' />
+      <source src={`/assets/lense-asset/videos/${src}.mp4`} type='video/mp4' />
     </video>
   </>
 }
