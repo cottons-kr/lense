@@ -1,7 +1,7 @@
 import { Flex } from '@/components/layout/Flex'
+import { EnvironmentalExplain, GovernanceExplain, SocialExplain } from './explain'
 
 import s from './style.module.scss'
-import { EnvironmentalExplain } from './explain'
 
 export function HomeWhatisESG() {
   return <>
@@ -11,8 +11,8 @@ export function HomeWhatisESG() {
       </h1>
       <Flex direction='column'>
         <EnvironmentalExplain />
-        <EnvironmentalExplain />
-        <EnvironmentalExplain />
+        <SocialExplain />
+        <GovernanceExplain />
       </Flex>
     </section>
   </>

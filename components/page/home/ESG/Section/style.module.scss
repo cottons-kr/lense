@@ -12,10 +12,14 @@
 
 .backdrop {
   padding: 10px;
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.3);
   p {
+    max-width: 1100px;
+    text-align: center;
     color: #FFF;
     font-size: 17px;
     font-weight: 510;
+    line-height: 1.6;
+    word-break: keep-all;
   }
 }

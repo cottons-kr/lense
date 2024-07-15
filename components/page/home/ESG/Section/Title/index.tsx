@@ -15,7 +15,7 @@ export function ExplainTitle(props: IProps) {
   const restTitleLetter = title.slice(1)
 
   return <>
-    <Flex direction='column' gap={15} width='fit-content'>
+    <Flex direction='column' align='center' gap={15} width='fit-content'>
       <h3 className={s.title}>
         <span
           style={{ color: `var(--${color})` }}
