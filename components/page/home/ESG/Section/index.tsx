@@ -17,8 +17,10 @@ export function ExplainContainer(props: IProps) {
     >
       <Flex
         className={s.backdrop}
+        direction='column'
         justify='center'
         align='center'
+        gap={50}
         height='100%'
       >{children}</Flex>
     </article>

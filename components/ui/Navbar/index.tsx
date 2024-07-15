@@ -15,7 +15,7 @@ function Left() {
       </Link>
       <Flex className={s.links} tag='ul'>
         <li>
-          <Link href='/companies'>리스트</Link>
+          <Link href='/companies'>기업 리스트</Link>
         </li>
       </Flex>
     </Flex>
@@ -28,19 +28,17 @@ function Right() {
 
 export function Navbar() {
   const [isTop, setIsTop] = useState(true)
-  const [isOutofVideo, setIsOutofVideo] = useState(false)
 
   useEffect(() => {
     const handler = () => {
       setIsTop(window.scrollY < 10)
-      setIsOutofVideo(window.scrollY > window.innerHeight)
     }
     window.addEventListener('scroll', handler)
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
   return <>
-    <Flex className={className(s.nav, isTop && s.top, isOutofVideo && s['out-of-video'])} tag='nav' justify='center'>
+    <Flex className={className(s.nav, isTop && s.top)} tag='nav' justify='center'>
       <Flex className={s.content} justify='space-between' align='center'>
         <Left />
         <Right />

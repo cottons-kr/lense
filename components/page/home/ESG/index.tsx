@@ -11,6 +11,8 @@ export function HomeWhatisESG() {
       </h1>
       <Flex direction='column'>
         <EnvironmentalExplain />
+        <EnvironmentalExplain />
+        <EnvironmentalExplain />
       </Flex>
     </section>
   </>
