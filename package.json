@@ -10,6 +10,7 @@
     "prisma:migrate:dev": "prisma migrate dev",
     "prisma:migrate:prod": "prisma migrate deploy",
     "prisma:generate": "prisma generate",
+    "prisma:format": "prisma format",
     "prisma:studio": "prisma studio -p 5999"
   },
   "dependencies": {

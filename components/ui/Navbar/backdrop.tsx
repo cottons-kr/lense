@@ -10,8 +10,13 @@ export function NavbarBackdrop() {
 
   useEffect(() => {
     const handler = () => {
-      setIsTop(window.scrollY < 10)
+      let value = window.scrollY < 10
+      if (location.pathname !== '/') {
+        value = false
+      }
+      setIsTop(value)
     }
+    handler()
     window.addEventListener('scroll', handler)
     return () => window.removeEventListener('scroll', handler)
   }, [])
