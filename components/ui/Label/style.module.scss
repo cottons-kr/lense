@@ -1,0 +1,14 @@
+.label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .text {
+    color: var(--Gray-700, #464646);
+    font-size: 16px;
+    &.essential::after {
+      content: ' *';
+      color: var(--Red, #E91C23);
+    }
+  }
+}

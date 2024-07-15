@@ -12,7 +12,7 @@ export default async function LoginPage() {
 
   const handleLogin = async () => {
     'use server'
-    await signIn('google', { redirectTo: '/edit' })
+    await signIn('google', { redirectTo: '/new' })
   }
 
   return <>
