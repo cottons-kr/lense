@@ -1,0 +1,42 @@
+.login {
+  display: flex;
+  width: 100%;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/lense-asset/images/mountains-6531903_1920.jpg');
+}
+
+.container {
+  padding: 50px;
+  border-radius: 40px;
+  background: #FFF;
+  form {
+    width: 100%;
+  }
+  button {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding: 15px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--Border, rgba(121, 125, 139, 0.16));
+    background: var(--Fill-Color, #FAFAFA);
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 510;
+    }
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 25px;
+}
