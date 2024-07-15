@@ -1,0 +1,22 @@
+.container {
+
+}
+
+.marquee {
+
+}
+
+.company {
+  padding: 40px 70px;
+  border-radius: 35px;
+  border: 1px solid #E4E4E4;
+  background: #F8F8F8;
+  img {
+    width: auto;
+    height: 50px;
+    filter: grayscale(100%);
+  }
+  &:hover img {
+    filter: grayscale(0%);
+  }
+}

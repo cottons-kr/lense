@@ -1,7 +1,7 @@
 import { Flex } from '@/components/layout/Flex'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { CompanyMarquee } from './company'
+// import { CompanyMarquee } from './company'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 import s from './style.module.scss'
@@ -34,7 +34,7 @@ export function HomeIntroduction() {
   return <>
     <section className={s.section}>
       <Content />
-      <CompanyMarquee />
+      {/* <CompanyMarquee /> */}
     </section>
   </>
 }
