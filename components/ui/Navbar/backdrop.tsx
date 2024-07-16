@@ -12,8 +12,8 @@ export function NavbarBackdrop() {
   useEffect(() => {
     const handler = () => {
       let value = window.scrollY < 10
-      if (noBackdrop.some(regexp => regexp.test(location.pathname))) {
-        value = true
+      if (!noBackdrop.some(regexp => regexp.test(location.pathname))) {
+        value = false
       }
       setIsTop(value)
     }
