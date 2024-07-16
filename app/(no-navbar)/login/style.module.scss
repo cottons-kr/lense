@@ -10,7 +10,10 @@
 .container {
   padding: 50px;
   border-radius: 40px;
-  background: #FFF;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 3px 4px 250px 20px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(12.5px);
   form {
     width: 100%;
   }
@@ -23,8 +26,11 @@
     align-items: center;
     gap: 20px;
     border-radius: 15px;
-    border: 1px solid var(--Border, rgba(121, 125, 139, 0.16));
-    background: var(--Fill-Color, #FAFAFA);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 510;
     img {
       width: 20px;
       height: 20px;

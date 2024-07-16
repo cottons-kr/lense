@@ -18,7 +18,7 @@ export default async function LoginPage() {
   return <>
     <div className={s.login}>
       <Flex className={s.container} direction='column' align='center' gap={40} width='100%' maxwidth='500px'>
-        <img className={s.logo} src='/lense_dark.svg' alt='LENSE' />
+        <img className={s.logo} src='/lense.svg' alt='LENSE' />
         <form action={handleLogin}>
           <button type='submit'>
             <img src='/assets/lense-asset/images/google_small.svg' />
