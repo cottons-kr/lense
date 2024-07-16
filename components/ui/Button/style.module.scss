@@ -39,7 +39,7 @@
 
 .no-color {
   background: #FFF;
-  border: 1px solid var(--BorderWhite, #E5E5E5);
+  border: 2px solid var(--border, rgba(121 125 139 / 0.16));
   &:hover {
     background: var(--Gray-100, #F5F5F5);
   }

@@ -1,8 +1,11 @@
 .form {
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 180px 0 150px 0;
+  h1 {
+    margin-bottom: 50px;
+  }
 }
 
 .logo {

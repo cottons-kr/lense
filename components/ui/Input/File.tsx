@@ -5,7 +5,7 @@ import { useRef, useState, DragEvent, useCallback, useEffect, ChangeEvent } from
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { faPaperclip } from '@fortawesome/free-solid-svg-icons'
-import { isFileTypeAccepted } from '../../../utils/format/file'
+import { isFileTypeAccepted } from '@/utils/format/file'
 
 import s from './style.module.scss'
 

@@ -8,7 +8,7 @@
   border-radius: 12px;
   font-family: inherit;
   font-size: 16px;
-  border: 1px solid var(--BorderWhite, #E5E5E5);
+  border: 2px solid var(--border, rgba(121 125 139 / 0.16));
   background: #FFF;
   &::placeholder {
     color: var(--Gray-400, #919191);
@@ -41,7 +41,7 @@
   border-radius: 10px;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23BCBCBCFF' stroke-width='4' stroke-dasharray='10%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
   &.dragged {
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%232048C0FF' stroke-width='4' stroke-dasharray='10%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%2350d890' stroke-width='4' stroke-dasharray='10%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
   }
   .icon {
     width: 65px;
