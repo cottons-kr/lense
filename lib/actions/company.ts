@@ -15,6 +15,15 @@ export async function createCompany(formData: FormData) {
     redirect('/login')
   }
 
+  const existingCompany = await prisma.company.findFirst({
+    where: {
+      ownerEmail: session.user.email
+    }
+  })
+  if (existingCompany) {
+    redirect(`/companies/${existingCompany.id}`)
+  }
+
   const logoImageSrc = await saveFile(data.logoImage)
   const bannerImageSrc = await saveFile(data.bannerImage)
 

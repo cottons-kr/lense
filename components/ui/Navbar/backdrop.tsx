@@ -6,13 +6,14 @@ import classNames from 'classnames'
 import s from './style.module.scss'
 
 export function NavbarBackdrop() {
+  const noBackdrop = [/^\/$/, /^\/companies\/[a-zA-Z0-9_-]+$/]
   const [isTop, setIsTop] = useState(true)
 
   useEffect(() => {
     const handler = () => {
       let value = window.scrollY < 10
-      if (location.pathname !== '/') {
-        value = false
+      if (noBackdrop.some(regexp => regexp.test(location.pathname))) {
+        value = true
       }
       setIsTop(value)
     }
