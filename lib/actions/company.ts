@@ -6,6 +6,7 @@ import { redirect } from 'next/navigation'
 import { prisma } from '@/utils/prisma'
 import { saveFile } from '@/utils/file'
 import { auth } from '@/utils/auth'
+import { getBestBackgroundColor } from '@/utils/image'
 
 export async function createCompany(formData: FormData) {
   const data = validateFormDataAndParse(formData, createCompanyDtoSchema)
@@ -26,6 +27,7 @@ export async function createCompany(formData: FormData) {
 
   const logoImageSrc = await saveFile(data.logoImage)
   const bannerImageSrc = await saveFile(data.bannerImage)
+  const theme = await getBestBackgroundColor(logoImageSrc)
 
   const company = await prisma.company.create({
     data: {
@@ -35,6 +37,7 @@ export async function createCompany(formData: FormData) {
       phone: data.phone,
       mail: data.mail,
       website: data.website,
+      theme,
       businessType: data.businessType,
       businessItem: data.businessItem,
 

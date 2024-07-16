@@ -45,6 +45,7 @@ model Company {
   phone        String
   mail         String
   website      String
+  theme        Theme
   businessType BusinessType
   businessItem BusinessItem
 

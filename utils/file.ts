@@ -22,7 +22,7 @@ export async function saveFile(file: File) {
   const buffer = Buffer.from(await file.arrayBuffer())
   await minioClient.putObject('lense-asset', path, buffer)
 
-  return `https://${getEnv('MINIO_ENDPOINT')}/images/${path}`
+  return `https://${getEnv('MINIO_ENDPOINT')}/lense-asset/${path}`
 }
 
 export async function deleteFile(filename: string) {

@@ -10,13 +10,16 @@ export default async function CompanyDetailPage(props: IPageProps) {
   const { id } = props.params
 
   const company = await prisma.company.findUnique({
-    where: { id }
+    where: { id },
+    include: {
+      news: { orderBy: { createdAt: 'desc' } }
+    }
   })
   if (!company) {
     redirect('/companies')
   }
 
   return <>
-    <div></div>
+    
   </>
 }
