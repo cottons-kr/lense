@@ -1,3 +1,4 @@
+import { CompanyDetailBanner } from '@/components/page/company/detail/Banner'
 import { prisma } from '@/utils/prisma'
 import { redirect } from 'next/navigation'
 
@@ -20,6 +21,6 @@ export default async function CompanyDetailPage(props: IPageProps) {
   }
 
   return <>
-    
+    <CompanyDetailBanner company={company}/>
   </>
 }
