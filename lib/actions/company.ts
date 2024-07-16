@@ -1,13 +1,44 @@
 'use server'
 
 import { validateFormDataAndParse } from '@/utils/validator'
-import { createCompanyDtoSchema } from '../dto/createCompany.dto'
+import { createCompanyDtoSchema } from '@/lib/dto/createCompany.dto'
 import { redirect } from 'next/navigation'
+import { prisma } from '@/utils/prisma'
+import { saveFile } from '@/utils/file'
+import { auth } from '@/utils/auth'
 
 export async function createCompany(formData: FormData) {
   const data = validateFormDataAndParse(formData, createCompanyDtoSchema)
+  const session = await auth()
   
-  
+  if (!session?.user || !session.user.email) {
+    redirect('/login')
+  }
 
-  redirect('/companies')
+  const logoImageSrc = await saveFile(data.logoImage)
+  const bannerImageSrc = await saveFile(data.bannerImage)
+
+  const company = await prisma.company.create({
+    data: {
+      ownerEmail: session.user.email,
+
+      name: data.name,
+      phone: data.phone,
+      mail: data.mail,
+      website: data.website,
+      businessType: data.businessType,
+      businessItem: data.businessItem,
+
+      logoImageSrc,
+      bannerImageSrc,
+
+      introductionTitle: data.introductionTitle,
+      introductionContent: data.introductionContent,
+      environmentContent: data.environmentContent,
+      socialContent: data.socialContent,
+      governanceContent: data.governanceContent
+    }
+  })
+
+  redirect(`/companies/${company.id}`)
 }

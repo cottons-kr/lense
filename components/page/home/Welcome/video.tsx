@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 
 import s from './style.module.scss'
 
-const vidoes = shuffleArray(['beach', 'mountain', 'sky', 'traffic'])
+const vidoes = shuffleArray(['beach', 'mountain', 'sky', 'traffic', 'farm', 'walk', 'windmill'])
 
 interface IProps {
   src: string
@@ -33,7 +33,7 @@ function Video(props: IProps) {
       playsInline
       style={{ opacity: order === currentOrder ? 1 : 0 }}
     >
-      <source src={`/assets/lense-asset/videos/${src}_vp9.webm`} type='video/webm' />
+      <source src={`/assets/lense-asset/videos/vp9/${src}_vp9.webm`} type='video/webm' />
       <source src={`/assets/lense-asset/videos/${src}.mp4`} type='video/mp4' />
     </video>
   </>
@@ -43,7 +43,7 @@ export function BackgroundVideo() {
   const [order, setOrder] = useState(0)
 
   useEffect(() => {
-    const INTERVAL = 12000
+    const INTERVAL = 7000
     const setNextVideo = (currentOrder: number) => {
       const nextOrder = currentOrder + 1 >= vidoes.length ? 0 : currentOrder + 1
       setOrder(nextOrder)

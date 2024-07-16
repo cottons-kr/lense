@@ -8,22 +8,54 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Theme {
+  LIGHT
+  DARK
+}
+
+enum BusinessType {
+  MANUFACTURING
+  WHOLESALE
+  RETAIL
+  SERVICES
+  CONSTRUCTION
+  FINANCE
+  INSURANCE
+  HOSPITALITY
+  FOOD_AND_BEVERAGE
+  TRANSPORTATION
+  REAL_ESTATE
+}
+
+enum BusinessItem {
+  ELECTRONICS
+  FOOD_PRODUCTS
+  APPAREL
+  COSMETICS
+  SOFTWARE
+  AUTOMOBILES
+  MEDICAL_DEVICES
+}
+
 model Company {
   id         String @id @default(cuid())
   ownerEmail String @unique
 
-  name    String
-  phone   String
-  mail    String
-  website String
+  name         String
+  phone        String
+  mail         String
+  website      String
+  businessType BusinessType
+  businessItem BusinessItem
 
+  logoImageSrc   String
   bannerImageSrc String
 
   introductionTitle   String
   introductionContent String
-  environmentContent  String
-  socialContent       String
-  governanceContent   String
+  environmentContent  String?
+  socialContent       String?
+  governanceContent   String?
 
   news News[]
 

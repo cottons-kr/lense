@@ -7,6 +7,9 @@ import { Textarea } from '@/components/ui/Input/Textarea'
 import { FileInput } from '@/components/ui/Input/File'
 import { SubmitButton } from '@/components/ui/Button/Submit'
 import { createCompany } from '@/lib/actions/company'
+import { businessItemName, businessTypeName } from '@/utils/name'
+import { Select } from '@/components/ui/Select'
+import { BusinessType, BusinessItem } from '@prisma/client'
 
 import s from './style.module.scss'
 
@@ -35,6 +38,20 @@ export default async function NewCompanyPage() {
           <Label text='공식 사이트 주소' essential>
             <Input type='url' name='website' />
           </Label>
+          <Label text='업태' essential>
+            <Select name='businessType'>{
+              Object.entries(BusinessType).map(([key, value]) => (
+                <option key={key} value={key}>{businessTypeName[value]}</option>
+              ))
+            }</Select>
+          </Label>
+          <Label text='종목' essential>
+            <Select name='businessItem'>{
+              Object.entries(BusinessItem).map(([key, value]) => (
+                <option key={key} value={key}>{businessItemName[value]}</option>
+              ))
+            }</Select>
+          </Label>
         </Flex>
 
         <Flex direction='column' gap={20}>
@@ -45,6 +62,9 @@ export default async function NewCompanyPage() {
           <Label text='내용' essential>
             <Textarea name='introductionContent' />
           </Label>
+          <Label text='로고 이미지' essential>
+            <FileInput title='로고 이미지' accept='image/*' name='logoImage' />
+          </Label>
           <Label text='배너 이미지' essential>
             <FileInput title='배너 이미지' accept='image/*' name='bannerImage' />
           </Label>
@@ -52,13 +72,13 @@ export default async function NewCompanyPage() {
 
         <Flex direction='column' gap={20}>
           <h2>ESG 소개</h2>
-          <Label text='환경 (Environment)' essential>
+          <Label text='환경 (Environment)'>
             <Textarea name='environmentContent' />
           </Label>
-          <Label text='사회 (Social)' essential>
+          <Label text='사회 (Social)'>
             <Textarea name='socialContent' />
           </Label>
-          <Label text='경영 (Governance)' essential>
+          <Label text='경영 (Governance)'>
             <Textarea name='governanceContent' />
           </Label>
         </Flex>

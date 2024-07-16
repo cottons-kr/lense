@@ -19,7 +19,7 @@ export function parseFormData(formData: FormData): Record<string, string | numbe
   return Object.fromEntries(Object.entries(data).map(([key, value]) => {
     if (value === 'true') return [key, true]
     if (value === 'false') return [key, false]
-    if (!isNaN(Number(value))) return [key, Number(value)]
+    // if (!isNaN(Number(value))) return [key, Number(value)]
     return [key, value]
   }))
 }

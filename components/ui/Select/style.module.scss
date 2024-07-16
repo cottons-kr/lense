@@ -1,0 +1,24 @@
+.select {
+  position: relative;
+  appearance: none;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  padding: 18px 40px 18px 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 2px solid var(--border, rgba(121 125 139 / 0.16));
+  background: #FFF;
+  font-size: 16px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDE3IDExIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMS45OTc1IDBMOC41IDYuNzk4OTJMMTUuMDAyNSAwTDE3IDIuMDkzMTJMOC41IDExTDAgMi4wOTMxMkwxLjk5NzUgMFoiIGZpbGw9IiM5MTkxOTEiLz48L3N2Zz4=');
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%;
+  background-size: 14px auto;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    border-color: var(--green, #50d890);
+  }
+}
