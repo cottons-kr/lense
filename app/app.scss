@@ -84,3 +84,7 @@ input:-webkit-autofill:active {
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--text-main) !important;
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
