@@ -1,8 +1,8 @@
 import { Flex } from '@/components/layout/Flex'
+import classNames from 'classnames'
 import { ReactNode } from 'react'
 
 import s from './style.module.scss'
-import classNames from 'classnames'
 
 interface IProps {
   title: string

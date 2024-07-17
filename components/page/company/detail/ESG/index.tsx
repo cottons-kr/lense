@@ -9,7 +9,7 @@ export function CompanyDetailESG(props: IProps) {
   const { company } = props
 
   return <>
-    <Flex align='center' gap={20}>
+    <Flex gap={20}>
       {
         company.environmentContent &&
           <ESGBox title='환경' subtitle='Environmental' color='green'>{company.environmentContent}</ESGBox>
