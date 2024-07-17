@@ -1,6 +1,6 @@
 # LENSE
 
-**Lens for ENviroment, Social, Ethics**
+**Lens for ENviroment, Social and Ethics**
 
 
 ### **Reliable ESG Data Provider**
