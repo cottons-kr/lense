@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 
 import s from './style.module.scss'
 import { CompanyDetailDescription } from '@/components/page/company/detail/Description'
+import { CompanyDetailESG } from '@/components/page/company/detail/ESG'
 
 interface IPageProps {
   params: {
@@ -28,6 +29,7 @@ export default async function CompanyDetailPage(props: IPageProps) {
     <CompanyDetailBanner company={company}/>
     <Flex className={s.content} direction='column' gap={70} maxwidth='1200px'>
       <CompanyDetailDescription company={company} />
+      <CompanyDetailESG company={company} />
     </Flex>
   </>
 }

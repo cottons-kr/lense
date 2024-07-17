@@ -30,7 +30,7 @@ export default async function NewCompanyPage() {
             <Input type='text' name='name' />
           </Label>
           <Label text='전화번호' essential>
-            <Input type='tel' name='phone' />
+            <Input type='tel' name='phone' minLength={10} />
           </Label>
           <Label text='이메일주소' essential>
             <Input type='email' name='mail' />
