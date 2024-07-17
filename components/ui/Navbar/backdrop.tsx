@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import s from './style.module.scss'
 
 export function NavbarBackdrop() {
-  const noBackdrop = [/^\/$/, /^\/companies\/[a-zA-Z0-9_-]+$/]
+  const noBackdrop = [/^\/$/]
   const [isTop, setIsTop] = useState(true)
 
   useEffect(() => {

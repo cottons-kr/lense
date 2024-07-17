@@ -1,0 +1,3 @@
+export function CompanySearch() {
+  return <></>
+}
