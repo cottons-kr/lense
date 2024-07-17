@@ -48,6 +48,7 @@ model Company {
   theme        Theme
   businessType BusinessType
   businessItem BusinessItem
+  viewCount    Int          @default(0)
 
   logoImageSrc   String
   bannerImageSrc String

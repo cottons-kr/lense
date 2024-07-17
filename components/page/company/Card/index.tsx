@@ -29,7 +29,7 @@ export function CompanyCard(props: IProps) {
         </Flex>
         <Flex className={s.stats} align='center' gap={8}>
           <FontAwesomeIcon icon={faEye} />
-          <span>{Math.floor(Math.random() * 100)}</span>
+          <span>{company.viewCount}</span>
         </Flex>
       </article>
     </Link> 

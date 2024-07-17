@@ -25,6 +25,13 @@ export default async function CompanyDetailPage(props: IPageProps) {
     redirect('/companies')
   }
 
+  await prisma.company.update({
+    where: { id },
+    data: { viewCount: {
+      increment: 1
+    } }
+  })
+
   return <>
     <CompanyDetailBanner company={company}/>
     <Flex className={s.content} direction='column' gap={70} maxwidth='1200px'>
